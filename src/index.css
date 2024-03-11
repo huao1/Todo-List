@@ -1,0 +1,25 @@
+body {
+    margin: 0;
+}
+
+header {
+    background-color: #9CBCB7;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 16px;
+    height: clamp(60px, 8vw ,80px);
+}
+
+.title {
+    margin-left: 30px;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: white;
+    font-size: clamp(26px, 5vw, 50px);
+}
+
+#logo {
+    width: clamp(40px, 5vw, 60px);
+    height: clamp(40px, 5vw, 60px);
+}
