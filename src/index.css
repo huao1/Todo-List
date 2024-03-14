@@ -10,6 +10,7 @@ header {
     align-items: center;
     gap: 16px;
     height: clamp(60px, 8vw ,80px);
+    border-bottom: #c1c1c1 solid 1px;
 }
 
 .title {
@@ -26,10 +27,11 @@ header {
 }
 
 #categories {
-    width: 10vw;
+    width: clamp(50px, 10vw, 130px);
     height: 100%;
     background-color: #eeeeee;
     padding: 3vw 5vw;
+    border-right: #c1c1c1 solid 1px;
 }
 
 #category-lists {
