@@ -17,6 +17,10 @@ header {
     grid-row: 1 / 2;
 }
 
+p {
+    margin: 0;
+}
+
 .title {
     margin-left: 30px;
     margin-top: 0;
@@ -73,8 +77,97 @@ header {
 }
 
 #list {
-    background-color: #f7f7f7;
+    background-color: white;
     grid-row: 2 / 3;
     grid-column: 2 / 3;
+    padding: clamp(12px, 5vw, 40px) 40px 0 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 }
 
+.list-item {
+    background-color: #eeeeee;
+    display: flex;
+    justify-content: space-between;
+    height: clamp(24px, 5vw, 48px);
+    transition: 0.15s;
+}
+
+.list-item:hover {
+    transform: scale(1.02);
+    box-shadow: 4px 4px 8px gray;
+}
+
+.high {
+    background-color: red;
+    width: 3px;
+    height: 100%;
+}
+
+.trash, .edit {
+    width: clamp(12px, 2vw, 24px);
+    height: clamp(12px, 2vw, 24px);
+}
+
+.trash:hover, .edit:hover, .empty {
+    filter: invert(65%) sepia(48%) saturate(558%) hue-rotate(324deg) brightness(97%) contrast(88%);
+}
+
+.list-text {
+    font-size: clamp(10px, 1.5vw, 18px);
+    font-weight: 200;
+}
+
+.left {
+    display: flex;
+    align-items: center;
+    text-align: center;   
+    width: 50%;
+    gap: clamp(4px, 1.75vw, 16px);
+}
+
+.right {
+    margin-right: 16px;
+    display: flex;
+    text-align: center;
+    justify-content: right;
+    align-items: center;
+    width: 40%;
+    gap: clamp(6px, 2.5vw, 40px);
+}
+
+.empty {
+    height: clamp(12px, 2vw, 18px);
+    width: clamp(12px, 2vw, 18px);
+}
+
+
+
+.item-date {
+    font-size: clamp(8px, 1.5vw, 14px);
+    font-weight: 100;
+}
+
+.details {
+    color: #E89275;
+    padding: 0;
+    border-radius: 3px;
+    border: #E89275 solid 2px;
+    width: clamp(50px, 6vw, 75px);
+    height: clamp(18px, 3vw, 25px);
+    font-weight: 800;
+    font-size: clamp(6px, 1.25vw, 12px);
+}
+
+.details:hover {
+    background-color: #E89275;
+    color: white;
+}
+
+.check-box {
+    border: none;
+    padding: 0;
+    height: clamp(12px, 2vw, 18px);
+    width: clamp(12px, 2vw, 18px);
+}
